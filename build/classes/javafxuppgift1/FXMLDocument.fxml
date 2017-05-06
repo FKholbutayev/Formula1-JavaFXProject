@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="580.0" prefWidth="646.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxuppgift1.FXMLDocumentController">
+   <children>
+      <TableView fx:id="tableview" editable="true" layoutY="72.0" onContextMenuRequested="#mouseclickedontable" onMouseClicked="#mouseclickedontable" prefHeight="475.0" prefWidth="394.0" tableMenuButtonVisible="true">
+        <columns>
+          <TableColumn fx:id="colrank" onEditCommit="#editrank" prefWidth="75.0" text="Rank" />
+          <TableColumn fx:id="colname" prefWidth="134.0" text="Name" />
+            <TableColumn fx:id="colcountry" prefWidth="77.0" text="Country" />
+            <TableColumn fx:id="colcar" prefWidth="107.0" text="Car" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="driverimage" fitHeight="274.0" fitWidth="249.0" layoutX="394.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="search" layoutX="494.0" layoutY="73.0" prefHeight="25.0" prefWidth="122.0" />
+      <Button fx:id="buttonplus" layoutX="396.0" layoutY="72.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#plusdriver" prefHeight="0.0" prefWidth="0.0" style="-fx-background-color: #ffd503;" text="+" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></Button>
+      <Button fx:id="buttonminus" layoutX="422.0" layoutY="72.0" minHeight="24.0" minWidth="25.0" mnemonicParsing="false" onAction="#minusdriver" style="-fx-background-color: e70909;" text="-" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Button>
+      <Button fx:id="buttonx" layoutX="617.0" layoutY="73.0" minHeight="24.0" minWidth="25.0" mnemonicParsing="false" onAction="#driverx" style="-fx-background-color: #3c2626;" text="X" textFill="#fbfafa">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Button>
+      <TableView fx:id="tableviewstats" layoutX="395.0" layoutY="350.0" prefHeight="51.0" prefWidth="249.0">
+        <columns>
+          <TableColumn fx:id="colpod" prefWidth="82.0" text="PODIUMS" />
+          <TableColumn fx:id="colpoints" prefWidth="82.0" text="POINTS" />
+            <TableColumn fx:id="colgp" prefWidth="82.0" text="GP ENTRY" />
+        </columns>
+      </TableView>
+      <Separator layoutX="393.0" layoutY="99.0" prefHeight="2.0" prefWidth="249.0" />
+      <Text fill="#fffefe" layoutX="459.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="F1 ACCESS" wrappingWidth="173.19189453125">
+         <font>
+            <Font name="Arial Black" size="27.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableraces" layoutX="394.0" layoutY="401.0" prefHeight="146.0" prefWidth="249.0">
+        <columns>
+          <TableColumn fx:id="colraces" prefWidth="125.0" text="RACES" />
+          <TableColumn fx:id="colseason" prefWidth="120.0" text="SEASON" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="71.0" layoutX="-2.0" layoutY="547.0" stroke="WHITE" strokeType="INSIDE" width="646.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#e81a1a" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="71.0" stroke="WHITE" strokeType="INSIDE" width="646.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#e81a1a" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="71.0" fitWidth="90.0" layoutX="546.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo-2015.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
